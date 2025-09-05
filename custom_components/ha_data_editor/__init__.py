@@ -21,7 +21,11 @@ async def async_setup_entry(
     www_path = os.path.join(current_file_path, "www")
 
     # Register a new static path for serving your custom panel
-    hass.http.register_static_path("/ha-data-editor-www", www_path)
+    # hass.http.async_register_static_paths("/ha-data-editor-www", www_path)
+
+    # bugfix (http.async_register_static_path depreciated in 2025.7)
+    # see: https://developers.home-assistant.io/blog/2024/06/18/async_register_static_paths
+    await hass.http.async_register_static_paths([StaticPathConfig("/ha-data-editor-www", www_path, True)])
 
     frontend.add_extra_js_url(hass, "/ha-data-editor-www/panel.js")
 
