@@ -1,11 +1,11 @@
 {
   "domain": "ha_data_editor",
   "name": "HA Data Editor",
-  "codeowners": ["@fredck"],
+  "codeowners": ["@DennisB66"],
   "config_flow": true,
-  "documentation": "https://github.com/fredck/ha-data-editor/blob/master/README.md",
+  "documentation": "https://github.com/DennisB66/ha-data-editor/blob/master/README.md",
   "integration_type": "service",
   "iot_class": "calculated",
-  "issue_tracker": "https://github.com/fredck/ha-data-editor/issues",
+  "issue_tracker": "https://github.com/DennisB66/ha-data-editor/issues",
   "version": "0.9.4"
 }
