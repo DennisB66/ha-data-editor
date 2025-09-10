@@ -2,14 +2,12 @@
 import logging
 import os
 
-from pathlib import Path
 from homeassistant import config_entries, core
 from homeassistant.components import frontend
 from homeassistant.components.http import StaticPathConfig
 from homeassistant.helpers import device_registry
 
 _LOGGER = logging.getLogger(__name__)
-
 
 async def async_setup_entry(
     hass: core.HomeAssistant, entry: config_entries.ConfigEntry
